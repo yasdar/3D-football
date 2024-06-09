@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>sport_tools_threejs</title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="css/style.css">
+   
+
+
+
+    <script src='main.js'></script>
+</head>
+<body>
+
+      <!-- html structure -->
+      <div id="app" class="base container-fluid h-100 w-100" style="padding: 0; position: relative;">
+        
+     
+         <!-- bottom tools-->
+      <div class="row bottomTools">
+
+ 
+        <div class="half">
+          <img id="bt_rotateC" class="clickableIcons" src="./assets/images/bt1.png" />
+          <img id="bt_rotateAC" class="clickableIcons" src="./assets/images/bt1.png" />
+          <img id="bt_rotateCX" class="clickableIcons" src="./assets/images/bt1.png" />
+          <img id="bt_rotateACX" class="clickableIcons" src="./assets/images/bt1.png" />
+
+          <img id="bt_save" class="clickableIcons" src="./assets/images/diskette.png" style="margin-left: 32px;" />
+           <img id="bt_edit" class="clickableIcons" src="./assets/images/edit.png" style="margin-left: 8px;" />
+        </div>
+    
+        <div id="objTool" class="half" style="left: 50%;">
+          <img id="loaderImg" style="display: none;" class="clickable" src="./assets/images/loader.png" />
+          <img id="bt_export" class="clickableIcons" src="./assets/images/exportbt.png" />
+          <img id="bt_clone" class="clickableIcons" src="./assets/images/clone.png" />
+          <img id="bt_trash" class="clickableIcons" src="./assets/images/trash.png" />
+          <img id="bt_scale" class="clickableIcons" src="./assets/images/scale.png" />
+          <img id="bt_flip"  class="clickableIcons" src="./assets/images/flip.png" />
+        <!-- <img id="bt_paint" class="clickable" src="./assets/images/paint.png"/>-->
+         <input type="text" data-coloris  class="coloris instance1" style="width: 94px;">
+
+        </div>
+    </div>
+      <!-- right tools-->
+      <div class="rightButtons">
+        <div id='PlayersBt' class="divTitle nonSelectedBt">
+          <img src="./assets/images/004-soccer.png">
+          <p class="title">Players</p>
+        </div>
+        <div id='kitsBt' class="divTitle nonSelectedBt">
+          <img src="./assets/images/paint.png">
+          <p class="title">KITS</p>
+        </div>
+      <div id='EquipmentsBt' class="divTitle nonSelectedBt">
+        <img src="./assets/images/002-cone.png">
+        <p class="title">Equipments</p>
+      </div>
+      <div id='PitchesBt' class="divTitle nonSelectedBt">
+        <img src="./assets/images/007-field.png">
+        <p class="title">Pitches</p>
+      </div>
+      <div id='bgsBt' class="divTitle nonSelectedBt">
+        <img src="./assets/images/stadium.png">
+        <p class="title">background</p>
+      </div>
+      <div id='TextBt' class="divTitle nonSelectedBt">
+        <img src="./assets/images/textIco.png">
+        <p class="title">Texts</p>
+      </div>
+      <div id='ShapeBt' class="divTitle nonSelectedBt">
+        <img src="./assets/images/shapesIco.png">
+        <p class="title">Shapes</p>
+      </div>
+    </div>
+      <div id="players" class="rightTools">
+      <div id="playersC" class="row" style="width: 100%; height:auto; margin-left: 1%;"></div>
+      </div>
+      <div id="kits" class="rightTools">
+        <div id="kitsC" class="row" style="width: 100%; height: auto;">
+
+          <div class="colorp">
+            <p>Shirt Color</p>
+              <div id="Shirt" class="playerClothes">
+                <img src="./assets/images/002-tshirt.png" style="max-width: 100%;">
+              </div>
+            <input type="text" data-coloris  class="coloris instance5" style="width: 94px;">
+          </div>
+          <div class="colorp">
+            <p>Shoulder Color</p>
+            <div id="Shoulder" class="playerClothes">
+              <img src="./assets/images/003-t-shirt.png" style="max-width: 100%;">
+            </div>
+            <input type="text" data-coloris  class="coloris instance6" style="width: 94px;">
+          </div>
+          <div class="colorp">
+            <p>Short Color</p>
+            <div id="Short" class="playerClothes">
+              <img src="./assets/images/004-football-shorts.png" style="max-width: 100%;">
+            </div>
+            <input type="text" data-coloris  class="coloris instance7" style="width: 94px;">
+          </div>
+          <div class="colorp">
+            <p>Socks Color</p>
+            <div  id="Socks" class="playerClothes">
+              <img src="./assets/images/005-socks.png" style="max-width: 100%;">
+            </div>
+            <input type="text" data-coloris  class="coloris instance8" style="width: 94px;">
+          </div>
+          <div class="colorp">
+            <p>SocksTop Color</p>
+            <div id="SocksTop" class="playerClothes">
+              <img src="./assets/images/topsocks.png" style="max-width: 100%;">
+            </div>
+            <input type="text" data-coloris  class="coloris instance9" style="width: 94px;">
+          </div>
+          <div class="colorp">
+            <p>SKin Color</p>
+            <div id="SKin" class="playerClothes">
+              <img src="./assets/images/human-body.png" style="max-width: 100%;">
+            </div>
+            <input type="text" data-coloris  class="coloris instance10" style="width: 94px;">
+          </div>
+        </div>
+        </div>
+
+      <div id="equipments" class="rightTools">
+      <div id="equipmentsC" class="row" style="width: 100%; height: 100%;"></div>
+      </div>
+
+      <div id="pitches" class="rightTools">
+        <div id="pitchesC" class="" style="width: 100%; height: auto;">
+          <div class="colorp">
+            <p>Border Color</p>
+            <input type="text" data-coloris  class="coloris instance2" style="width: 94px;">
+          </div>
+          <div class="colorp">
+            <p>line Color</p>
+            <input type="text" data-coloris  class="coloris instance3" style="width: 94px;">
+          </div>
+          <div class="colorp">
+            <p>Pitch Color</p>
+            <input type="text" data-coloris  class="coloris instance4" style="width: 94px;">
+          </div>
+        </div>
+        </div>
+
+        <div id="bgs" class="rightTools">
+          <div id="bgsC" class="" style="width: 100%; height: auto;">
+            <div class="colorp">
+              <p>Select background</p>
+            </div>
+          </div>
+          </div>
+
+          <div id="texts" class="rightTools">
+            <div id="textsC" class="row" style="width: 100%; height: 100%;text-align: center; ">
+              <h4 style="color: white;">Text :</h4>
+              <input id='userText' type="text" style="width: 90%; margin-left: 0%;">
+              <h4 style="color: white;">Select Font</h4>
+              <button id="btAddText" type="button" class="buttonUI">OK</button>
+            </div>
+            </div>
+
+            <div id="_shapes" class="rightTools">
+              <div id="shapesC" class="" style="width: 100%; height: auto;">
+                <div class="colorp">
+                  <p>Select a shape</p>
+                </div>
+              </div>
+              </div>
+          <!--layer Div -->
+          <div class="blackLayer"></div>
+          <!--save user work-->
+          <div class="popup" id="save_work">
+                <label class="labelUI">Name : </label>
+                <input class="inputUI" type="text" id="save_name" />
+                <div class="checkmark">
+                  <input id="check_override" type="checkbox">
+                  <span >Override existing file</span>
+                </div>
+                <button id="" type="button" class="buttonUI">Save</button>
+                <p class="infoUI">infos:</p>
+        </div>
+
+        <!-- edit user -->
+        <div class="popup" id="edit_work" 
+        style="
+        align-items: center;
+        justify-content: center;">
+        <label for="cars" style="margin-right: 10px;  font-weight: bold;">Choose a file:</label>
+        <select name="files" id="filesList" style="
+        margin-right: 10px;
+        font-size: 1.2rem;
+        width: 128px;
+        height: auto;
+        border: black 2px solid;">
+        </select>
+        <button type="button" class="buttonUI" style="margin-left: 20px;">Open</button>
+      </div> 
+
+
+
+    </div> 
+</body>
+</html>
+
+
